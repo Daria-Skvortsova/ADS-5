@@ -45,7 +45,7 @@ int prior_calc(char value) {
 }
 std::string infx2pstfx(std::string inf) {
   std::string pref;
-  TStack<int> stack;
+  TStack<int,100> stack;
   for (int i = 0; i < inf.length(); i++) {
     if (priority(inf[i]) == 4) {
       pref.push_back(inf[i]);
@@ -84,7 +84,7 @@ std::string infx2pstfx(std::string inf) {
 }
 
 int eval(std::string pref) {
-  TStack<int> stack_p;
+  TStack<int,100> stack_p;
   int otvet = 0;
   std::string otv_pref;
   for (int i = 0; i < pref.length(); i++) {
