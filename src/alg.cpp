@@ -6,41 +6,30 @@ int priority(char op) {
   switch (op) {
   case '(':
     return 0;
-    break;
   case ')':
     return 1;
-    break;
   case '+':case'-':
     return 2;
-    break;
   case '*':case'/':
     return 3;
-    break;
   default:
     return 4;
-    break;
   }
 }
 int prior_calc(char value) {
   switch (value) {
   case '+':
     return 1;
-    break;
   case '-':
     return 2;
-    break;
   case '*':
     return 3;
-    break;
   case '/':
     return 4;
-    break;
   case ' ':
     return 0;
-    break;
   default:
     return 5;
-    break;
   }
 }
 std::string infx2pstfx(std::string inf) {
